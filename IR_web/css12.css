@@ -1,0 +1,465 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-4-13, 16:40:32
+    Author     : lenovo
+*/
+body
+{
+    /*width: 75%;*/
+    width: 100vw;
+    /*width: 100vmax;*/
+    /*height: 700px;/*change from 650xp*/
+    height: 100vh;
+    /*height: 100vmax;*/
+    border: 1px solid lightblue;/*change from black*/
+    background-color: white;
+    margin: 0 auto;
+}
+/*top div box*/
+.top_tag
+{
+    width: 100%;
+    height: 15%;
+    background-color: lightslategray;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+}
+
+.top_text
+{
+    width: 100%;
+    height:33.3%;
+    border:1px solid black;
+    position: absolute;
+    top: 0;
+    
+}
+
+.top_sorting
+{
+    width: 100%;
+    height: 50%;
+    border: 1px solid black;
+    top: 0;
+    position: absolute;
+    
+}
+
+.top_sorting_price
+{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    position: absolute;
+    bottom: 0;
+}
+
+.top_sorting_distance
+{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    margin-left: 33.3%;
+    position: absolute;
+    bottom: 0;
+}
+
+.top_sorting_rating
+{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    margin-left: 66.6%;
+    position: absolute;
+    bottom: 0;
+}
+
+.tagul
+{
+    width: 100%;
+    height: 50%;
+    border:1px solid black;
+    list-style-type: none;
+    /*margin-left: 3%;*/
+    position: absolute;
+    bottom: 0;
+}
+
+.tagul_list1
+{
+    width: 25%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    position: absolute;
+    bottom: 0;
+}
+.tagul_list2
+{
+    width: 25%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    margin-left: 25%;
+    position: absolute;
+    bottom: 0;
+}
+.tagul_list3
+{
+    width: 25%;
+    height: 100%;
+    float: left;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    margin-left: 50%;
+    position: absolute;
+    bottom: 0;
+}
+.tagul_list4
+{
+    width: 25%;
+    height: 100%;
+    float: right;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid black;
+    margin-left: 75%;
+    position: absolute;
+    bottom: 0;
+}
+
+.blank{ clear:both; overflow:hidden; display:block; overflow:hidden;}
+
+.result
+{
+    width: 100%;
+    height: auto;
+    /*height: 75%;*/
+    min-height: 75%;
+    background-color: lightgray;
+    padding-top: 2%;/*For the fixed position of top_tag*/
+    padding-bottom: 6%;/*For the fixed position of top_tag*/
+    
+    overflow: auto;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.itemA
+{
+    width: 100%;
+    height: 18vh;
+    border: 1px solid black;
+    /*margin: 0 auto;*/
+    /*margin-top: 0.1%;*/
+    list-style-type: none;/*eliminate the black point of the picture*/
+    /*padding: 0;*/
+    position: relative;
+    right: 1%;
+    margin-top: 1%;
+    
+    /*width: 100%;
+    height: 33.3%;
+    border:1px solid black;
+    list-style-type: none;
+    /*margin-left: 3%;
+    position: absolute;
+    bottom: 0;*/
+  
+}
+
+.item1
+{
+    width: 100%;
+    height: 25%;
+    border: 1px solid black;
+    /*margin: 0 auto;*/
+    /*margin-top: 0.1%;*/
+    list-style-type: none;/*eliminate the black point of the picture*/
+    /*padding: 0;*/
+    position: absolute;
+    top: 15%;
+    
+    /*width: 100%;
+    height: 33.3%;
+    border:1px solid black;
+    list-style-type: none;
+    /*margin-left: 3%;
+    position: absolute;
+    bottom: 0;*/
+  
+}
+
+.item2
+{
+    width: 100%;
+    height: 25%;
+    border: 1px solid black;
+    /*margin: 0 auto;*/
+    /*margin-top: 0.1%;*/
+    list-style-type: none;/*eliminate the black point of the picture*/
+    /*padding: 0;*/
+    position: absolute;
+    top: 40%;
+  
+}
+
+/*control the area of the picture */
+.item_left
+{
+    width: 20%;
+    height:95%;
+    border: 1px solid blue;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    float: left;
+}
+
+/*.item1 img1
+{
+    width: 100%;
+    height: 100%;
+    /*margin-left: 1%;
+    /*margin-top: 1%;
+}
+*/
+
+.item_discription
+{
+    width: 65%;
+    height:95%;
+    border: 1px solid blue;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 0.5%;
+    float: left;
+    /*float: left;*/
+    
+}
+
+.item_discription_name
+{
+    width: 100%;
+    height: 33.3%;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid red;
+    float: left;
+    position: relative;
+    top:0;
+    font-size:1vmin;
+}
+
+.item_discription_Ranking
+{
+    width: 50%;
+    height: 30%;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid red;
+    float: left;
+    top: 0;
+    position: relative;
+    font-size:1vmin;
+}
+
+.item_discription_Ranking img
+{
+     width:100%;
+    height: 100%;
+}
+
+.item_discription_price
+{
+    width: 47%;
+    height: 30%;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid red;
+    float: right;
+    top: 0;
+    position: relative;
+    font-size:1vmin;
+}
+
+.item_discription_price img
+{
+    width:100%;
+    height: 100%;
+}
+
+.item_discription_category
+{
+    width: 100%;
+    height: 33.3%;
+    /*margin-left: 12%;*/
+    /*margin-top: 1%;*/
+    border:1px solid red;
+    float: left;
+    bottom: 0;
+    position: relative;
+    font-size:1vmin;
+}
+
+.item_right
+{
+    width: 13%;
+    height:95%;
+    border: 1px solid blue;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 86%;
+    /*float: right;
+    
+    width: 13%;
+    height:95%;
+    border: 1px solid blue;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 86%;*/
+    position: relative;
+    
+    
+}
+/*display area of phone*/
+.phoneul
+{
+    width:75%;
+    height: 90%;
+    border: 1px solid black;
+    /*float:right;
+    margin-top: 0.5%;
+    margin-right: 0.5%;*/
+    list-style-type: none;
+    
+}
+
+.phoneul li
+{
+    width: 100%;
+    height: 50%;
+    border:1px solid blue;
+    /*margin-top: 1%;*/
+}
+/*control the size of image*/
+.phoneul img
+{
+    width:90%;
+    height: 90%;
+    /*margin-left: 0.5%;*/
+    /*margin-top: 0.5%;*/
+}
+
+.item_right_phone
+{
+    width: 100%;
+    height:50%;
+    border:1px solid blue;
+    position: absolute;
+    top: 0;
+}
+
+.item_right_map
+{
+    width: 100%;
+    height:50%;
+    border:1px solid blue;
+    position: absolute;
+    bottom: 0;
+}
+
+.item_right img
+{
+     width:100%;
+    height: 100%;
+}
+
+.bottom
+{
+    width: 100%;
+    height: 10%;
+    background-color: lightslategray;
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    
+
+}
+
+.bottom_text
+{
+    width: 40%;
+    height:90%;
+    border: 1px solid black;
+    float: left;
+    /*margin-left: 1%;*/
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bottom_text input
+{
+    /*width: 50%;*/
+    margin:0 auto;
+
+}
+
+.bottom_language
+{
+    width: 25%;
+    height:90%;
+    border: 1px solid black;
+    float: left;
+    margin-left: 1%;
+}
+
+.bottom_recorder
+{
+    width: 30%;
+    height:90%;
+    border: 1px solid black;
+    float: right;
+    margin-left: 1%;
+    text-align: center;
+}
+
+.bottom_recorder input
+{
+    width: 50%;
+    height: 60%;
+    margin:0 auto;
+}
+
+.language{  
+                width:100%;  
+                height:50%;  
+                appearance:none;  
+                position: relative;
+                top: 0;
+                -moz-appearance:none;  
+                -webkit-appearance:none;  
+                /*background: url("images/select.png") no-repeat right center;*/  
+                /*font-size:16px;*/  
+                font-family:Microsoft YaHei;  
+                color:black;  
+                text-align: center;
+            }  
