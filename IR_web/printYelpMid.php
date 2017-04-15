@@ -17,10 +17,12 @@ for ($j = 0; $j<$num;$j++){
   		$rating_pic = "images/5.jpg";
   	}elseif ($rating[$j]=="3") {
   		$rating_pic = "images/3.jpg";
-  	}elseif ($rating[$j]=="4") {
-  		$rating_pic = "images/4.jpg";
-  	}else{
-  		$rating_pic = "images/4.jpg";
+  	}elseif ($rating[$j]=="2") {
+      $rating_pic = "images/2.jpg";
+    }elseif ($rating[$j]=="4") {
+      $rating_pic = "images/4.jpg";
+    }else{
+  		$rating_pic = "images/1.5.jpg";
   	}
   	//echo $rating_pic."<BR>";
 

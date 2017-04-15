@@ -8,6 +8,7 @@ $longitude=$_POST['longitude'];
 $sort =$_POST['sort']; // if no sort then null
 $values =$_POST['tagTerm']; // values hidden split
 */
+echo $values;
 
 // query post to yelp
 $yelpURL1 = "term=".$a."&categories".$values."&latitude=".$latitude."&longitude=".$longitude."&limit=50";
@@ -27,7 +28,7 @@ function GetValue($url){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   //curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer XXXXXXXXXX')); // Yelp token
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXWHYx')); // Yelp token
   $result = curl_exec($ch);
   curl_close($ch);  
   return $result;
@@ -151,7 +152,7 @@ foreach($ary as $key=>$value){
 
 // delete already select tag
 $result=array_diff($top,$arr1);
-
+//print_r($top)."<BR>".print_r($arr1);
 //print_r($result);
 
 //echo "<BR>";

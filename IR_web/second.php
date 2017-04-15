@@ -86,13 +86,96 @@ and open the template in the editor.
             //location.href="yelp.php?longitude="+longitude;
         }
 
-        /*
-        function change_language() {
-            var check = document.getElementById("language").value;
-            var setcheck = document.getElementsByTagName("language");
+        
+        function sort_price() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "price";
 
-            setcheck.value = check;
-        }*/
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+        
+        function sort_distance() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "mile";
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+        
+        function sort_rating() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "rating";
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+
+        
+        function tag1() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "";
+            
+            var element3 = document.getElementById("tagTerm");
+            var element4 = document.getElementById("tag1");
+            element3.value = element3.value+","+element4.value;
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+
+        
+        function tag2() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "";
+            
+            var element3 = document.getElementById("tagTerm");
+            var element4 = document.getElementById("tag2");
+            element3.value = element3.value+","+element4.value;
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+
+        
+        function tag3() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "";
+            
+            var element3 = document.getElementById("tagTerm");
+            var element4 = document.getElementById("tag3");
+            element3.value = element3.value+","+element4.value;
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+
+        
+        function tag4() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "";
+            
+            var element3 = document.getElementById("tagTerm");
+            var element4 = document.getElementById("tag4");
+            element3.value = element3.value+","+element4.value;
+
+            //alert(element2.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
         
 
     </script>
@@ -123,9 +206,15 @@ and open the template in the editor.
             
             <!--price, distance, rating sorting-->
             <div class="top_sorting">
-                <div class="top_sorting_price"><input type="button" value="price" name="price" style="width: 100%; height: 90%;" onclick="window.location.href=('#')"></div>
-                <div class="top_sorting_distance"><input type="button" value="distance" name="distance" style="width: 100%; height: 90%;" onclick="window.location.href=('#')"></div>
-                <div class="top_sorting_rating"><input type="button" value="rating" name="rating" style="width: 100%; height: 90%;" onclick="window.location.href=('#')"></div>
+                <div class="top_sorting_price">
+                    <input type="button" value="price" id="price" name="price" onclick="sort_price()" style="width: 100%; height: 90%;" >
+                </div>
+                <div class="top_sorting_distance">
+                    <input type="button" value="distance" name="distance" onclick="sort_distance()" style="width: 100%; height: 90%;" >
+                </div>
+                <div class="top_sorting_rating">
+                    <input type="button" value="rating" name="rating" onclick="sort_rating()" style="width: 100%; height: 90%;" >
+                </div>
             
             </div>
             
@@ -133,11 +222,18 @@ and open the template in the editor.
             <div class="tagul">
                 
                 
-                <div class="tagul_list1"><input type="button" value="<?php echo $tag_final4[0]; ?>" name="t1" style="width: 100%; height: 100%;" onclick="window.location.href=('#')"></div>
-                <!--<div class="tagul_list2"><a href="#">tag2</a></div>-->
-                <div class="tagul_list2"><input type="button" value="<?php echo $tag_final4[1]; ?>" name="t2" style="width: 100%; height: 100%;" onclick="window.location.href=('#')"></div>
-                <div class="tagul_list3"><input type="button" value="<?php echo $tag_final4[2]; ?>" name="t3" style="width: 100%; height: 100%;" onclick="window.location.href=('#')"></div>
-                <div class="tagul_list4"><input type="button" value="<?php echo $tag_final4[3]; ?>" name="t4" style="width: 100%; height: 100%;" onclick="window.location.href=('#')"></div>
+                <div class="tagul_list1">
+                    <input type="button" id="tag1" value="<?php echo $tag_final4[0]; ?>" name="t1" style="width: 100%; height: 100%;" onclick="tag1()">
+                </div>
+                <div class="tagul_list2">
+                    <input type="button" id="tag2" value="<?php echo $tag_final4[1]; ?>" name="t2" style="width: 100%; height: 100%;" onclick="tag2()">
+                </div>
+                <div class="tagul_list3">
+                    <input type="button" id="tag3" value="<?php echo $tag_final4[2]; ?>" name="t3" style="width: 100%; height: 100%;" onclick="tag3()">
+                </div>
+                <div class="tagul_list4">
+                    <input type="button" id="tag4" value="<?php echo $tag_final4[3]; ?>" name="t4" style="width: 100%; height: 100%;" onclick="tag4()">
+                </div>
             </div>
         </div>
         
@@ -190,13 +286,13 @@ and open the template in the editor.
             <form id="sampleForm1" name="sampleForm1" action="second.php" method="post">
                 <div class="bottom_text">
                     <input type="text" style="width: 98%; height: 45%;" name="querytext" id="querytext" value="<?php echo $a; ?>">
-                    <input type="submit" value="search" name="r1" style="width: 100%; height: 50%;" onclick="window.location.href=('#')">
+                    <input type="submit" value="search" name="r1" style="width: 100%; height: 50%;" >
                 </div>
                 <input type="hidden" name="latitude" id="latitude" value="<?php echo $latitude ?>" >
                 <input type="hidden" name="longitude" id="longitude" value="<?php echo $longitude ?>" >
                 <input type="hidden" name="tagTerm" id="tagTerm" value="<?php echo $values ?>" >
                 <input type="hidden" name="TorF" id="TorF" value="F" > <!--Google speech API or not-->
-                <input type="hidden" name="sort" value="<?php echo $sort ?>"> <!-- mile, price, rating-->
+                <input type="hidden" name="sort" id="sort" value="<?php echo $sort ?>"> <!-- mile, price, rating-->
             </form> 
             <!--Wayne edit -->
             <form id="sampleForm" name="sampleForm" action="second.php" method="post">                            
@@ -216,7 +312,7 @@ and open the template in the editor.
                 <input type="hidden" name="tagTerm" id="tagTerm" value="<?php echo $values ?>" >
                 <input type="hidden" name="TorF" id="TorF" value="T" > <!--Google speech API or not-->
                 <!--<input type="hidden" name="language" value="en" > Google speech API or not-->
-                <input type="hidden" name="sort" value="<?php echo $sort ?>"> <!-- mile, price, rating-->
+                <input type="hidden" name="sort" id="sort" value="<?php echo $sort ?>"> <!-- mile, price, rating-->
                 <input type="hidden" name="base64" id="base64" value="" >
            </form>
         </div>

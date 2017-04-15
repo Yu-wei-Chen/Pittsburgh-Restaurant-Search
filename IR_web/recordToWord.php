@@ -16,7 +16,7 @@ $term1 = explode("base64,", $term);
 $upload = $term1[1];
 
 // Post to Google Speech API with Google API key
-$url_send ="https://speech.googleapis.com/v1beta1/speech:syncrecognize?key=XXXXXXXXXX"; 
+$url_send ="https://speech.googleapis.com/v1beta1/speech:syncrecognize?key=AIzaSy4"; 
 
 
 function setData($language,$upload){
