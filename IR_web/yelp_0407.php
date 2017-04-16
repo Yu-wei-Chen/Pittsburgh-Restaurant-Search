@@ -8,11 +8,11 @@ $longitude=$_POST['longitude'];
 $sort =$_POST['sort']; // if no sort then null
 $values =$_POST['tagTerm']; // values hidden split
 */
-echo $values;
+echo $values1;
 
 // query post to yelp
-$yelpURL1 = "term=".$a."&categories".$values."&latitude=".$latitude."&longitude=".$longitude."&limit=50";
-$yelpURL2 = "term=".$a."&categories".$values."&location=Pittsburgh"."&limit=50";
+$yelpURL1 = "term=".$a."&categories".$values1."&latitude=".$latitude."&longitude=".$longitude."&limit=50";
+$yelpURL2 = "term=".$a."&categories".$values1."&location=Pittsburgh"."&limit=50";
     
 // prevent lat & long did'nt pass to php
 if ($latitude==null||$longitude==null){
@@ -28,7 +28,7 @@ function GetValue($url){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   //curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXWHYx')); // Yelp token
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer LHGWHYx')); // Yelp token
   $result = curl_exec($ch);
   curl_close($ch);  
   return $result;

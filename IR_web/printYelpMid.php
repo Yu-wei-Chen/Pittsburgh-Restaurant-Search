@@ -60,10 +60,11 @@ for ($j = 0; $j<$num;$j++){
 		    	echo"</div>";
 		    echo "</div>";
 		    echo "<div class=\"item_right\">";
-		    	echo "<div class=\"item_right_phone\"><img src=\"images/phone.jpg\"/>";
-		    		//echo $phone[$j];
+		    	echo "<div class=\"item_right_phone\">";
+          echo "<a href=\"tel:".$phone[$j]."\"><img src=\"images/phone.jpg\"/></a>"; //
 		    	echo "</div>";
-		    	echo "<div class=\"item_right_map\">";//<img src=\"images/map.jpg\"/>
+		    	echo "<div class=\"item_right_map\">";
+            echo "<img src=\"images/map.png\" onclick=\"tomap(".$latitude1[$j].",".$longitude1[$j].")\" />";
 		    		echo number_format($mile[$j]/1609, 2)."<BR>miles";
 		    	echo "</div>";
 	    echo "</div>";

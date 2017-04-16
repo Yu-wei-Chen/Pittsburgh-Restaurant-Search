@@ -3,9 +3,9 @@
 function GetTranslate($target,$fromlang){
 	// decide translate en to zh or zh to en
 	if ($fromlang == "en") {
-		$url="https://translation.googleapis.com/language/translate/v2?key=AIRqJ_sWUY&source=en&target=zh-tw&q=".$target;
+		$url="https://translation.googleapis.com/language/translate/v2?key=AIzaSyBJ-N&source=en&target=zh-tw&q=".$target;
 	}else{
-		$url="https://translation.googleapis.com/language/translate/v2?key=AIzRqJ_sWUY&source=zh-tw&target=en&q=".$target;
+		$url="https://translation.googleapis.com/language/translate/v2?key=AIzaSyBJ-N_Y&source=zh-tw&target=en&q=".$target;
 	}
 
 	// GET url value (json)

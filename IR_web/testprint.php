@@ -9,14 +9,14 @@
         $values = $_POST['tagTerm']; // values hidden split
         $TorF = $_POST['TorF'];
 
-echo $term."<BR><BR><BR>";
-echo $language."<BR>";
-echo $a."<BR>";
-echo $latitude."<BR>";
-echo $longitude."<BR>";
-echo $sort."<BR>";
-echo $values."<BR>";
-echo $TorF."<BR>";
+echo "term: ".$term."<BR><BR><BR>";
+echo "language: ".$language."<BR>";
+echo "term: ".$a."<BR>";
+echo "latitude: ".$latitude."<BR>";
+echo "longitude: ".$longitude."<BR>";
+echo "sort: ".$sort."<BR>";
+echo "values: ".$values."<BR>";
+echo "TorF: ".$TorF."<BR>";
 
 include_once("recordToWord.php");
 

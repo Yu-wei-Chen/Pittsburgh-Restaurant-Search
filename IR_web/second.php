@@ -10,7 +10,7 @@ and open the template in the editor.
         <script src="src/recorder.js"></script>
         <script src="src/Fr.voice.js"></script>
         <script src="js/jquery.js"></script>
-        <script src="js/app.js"></script>
+        <script src="js/app1.js"></script>
         <title>Pittsburgh Restaurant Search System</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,6 +97,18 @@ and open the template in the editor.
             document.forms["sampleForm1"].submit();
         }
         
+        function tomap(lat_tar,long_tar) {
+            
+            var lat1 = document.getElementById("latitude_tar");
+            var long1 = document.getElementById("longitude_tar");
+
+            lat1.value = lat_tar;
+            long1.value = long_tar;
+
+            
+            document.forms["sampleForm2"].submit();
+        }
+        
         function sort_distance() {
             
             var element2 = document.getElementById("sort");
@@ -177,6 +189,22 @@ and open the template in the editor.
             document.forms["sampleForm1"].submit();
         }
         
+        function submitsearch() {
+            
+            var element2 = document.getElementById("sort");
+            element2.value = "";
+            
+            var element3 = document.getElementById("tagTerm");
+            element3.value = "";
+            
+            //var element4 = document.getElementById("sampleForm1");
+            //element4.action = "testprint.php";
+
+            //alert(element2.value+"/"+element3.value);
+            
+            document.forms["sampleForm1"].submit();
+        }
+        
 
     </script>
         <?php 
@@ -193,6 +221,11 @@ and open the template in the editor.
         if ($TorF == "T") {
             include_once("recordToWord.php"); 
         }
+
+        $cate_size = 0-(strlen($values)-1);
+
+        $values1 = substr($values,$cate_size);
+
 
         include_once("yelp_0407.php"); 
 
@@ -286,7 +319,7 @@ and open the template in the editor.
             <form id="sampleForm1" name="sampleForm1" action="second.php" method="post">
                 <div class="bottom_text">
                     <input type="text" style="width: 98%; height: 45%;" name="querytext" id="querytext" value="<?php echo $a; ?>">
-                    <input type="submit" value="search" name="r1" style="width: 100%; height: 50%;" >
+                    <input type="button" value="search" id="searchbutton" name="r1" style="width: 100%; height: 50%;" onclick="submitsearch()">
                 </div>
                 <input type="hidden" name="latitude" id="latitude" value="<?php echo $latitude ?>" >
                 <input type="hidden" name="longitude" id="longitude" value="<?php echo $longitude ?>" >
@@ -304,7 +337,7 @@ and open the template in the editor.
                     </select>
                 </div>
                 <div class="bottom_recorder">
-                    <input type="button" value="recorder" id="record" name="r1" style="width: 100%; height: 100%;" onclick="window.location.href=('#')">
+                    <input type="button" value="recorder" id="record" name="r1" style="width: 100%; height: 100%;" >
                 </div>
                 <!--Wayne add -->
                 <input type="hidden" name="latitude" id="latitude" value="<?php echo $latitude ?>" >
@@ -314,6 +347,11 @@ and open the template in the editor.
                 <!--<input type="hidden" name="language" value="en" > Google speech API or not-->
                 <input type="hidden" name="sort" id="sort" value="<?php echo $sort ?>"> <!-- mile, price, rating-->
                 <input type="hidden" name="base64" id="base64" value="" >
+           </form>
+           <form id="sampleForm2" name="sampleForm2" action="GoogleMapAPI.php" method="post">   
+                <!--Wayne add -->
+                <input type="hidden" name="latitude_tar" id="latitude_tar" value="" >
+                <input type="hidden" name="longitude_tar" id="longitude_tar" value="" >
            </form>
         </div>
     </body>

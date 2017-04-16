@@ -150,6 +150,13 @@ $(document).ready(function(){
           //alert("Check the web console for the URL WAV"+url);
           $recordStatus = 1;
           document.sampleForm.base64.value = url; // use hidden post to server1.php
+          // set sort value empty
+          var element2 = document.getElementById("sort");
+            element2.value = "";
+          // set tagTerm value empty
+          var element3 = document.getElementById("tagTerm");
+          element3.value = "";
+          
           document.forms["sampleForm"].submit(); // submit form
         }, "base64");
       }
