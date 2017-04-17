@@ -31,7 +31,7 @@ img{max-width:100%;}
 /*--login form start here--*/
 body {
     text-align: center;
-   background: url("../images/background.jpg");
+   background: url("../images/background1.jpg");
    background-size: cover;
    font-family: 'Open Sans', sans-serif;
    font-size: 100%;
@@ -214,7 +214,7 @@ body {
   margin: 21em 0em 7.2em 0em;
 }
 .search {
-  margin: 22em 0em 0em 0em;
+  margin: 18.5em 0em 0em 0em; /*22em*/
 }
 .s-bar {
   width: 58%;

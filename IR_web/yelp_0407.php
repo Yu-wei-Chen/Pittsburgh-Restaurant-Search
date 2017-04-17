@@ -28,7 +28,7 @@ function GetValue($url){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   //curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer LHGWHYx')); // Yelp token
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXLHGWHYx')); // Yelp token
   $result = curl_exec($ch);
   curl_close($ch);  
   return $result;

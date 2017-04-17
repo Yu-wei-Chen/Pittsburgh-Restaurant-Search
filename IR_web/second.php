@@ -10,7 +10,7 @@ and open the template in the editor.
         <script src="src/recorder.js"></script>
         <script src="src/Fr.voice.js"></script>
         <script src="js/jquery.js"></script>
-        <script src="js/app1.js"></script>
+        <script src="js/app3.js"></script><!--mobile: app1.js / web: app3.js-->
         <title>Pittsburgh Restaurant Search System</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -219,7 +219,7 @@ and open the template in the editor.
         $TorF = $_POST['TorF'];
 
         if ($TorF == "T") {
-            include_once("recordToWord.php"); 
+            include_once("recordToWord.php");  // web: recordToWord.php / mobile recordToWord1.php
         }
 
         $cate_size = 0-(strlen($values)-1);

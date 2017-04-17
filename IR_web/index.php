@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="src/recorder.js"></script>
 	<script src="src/Fr.voice.js"></script>
 	<script src="js/jquery.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/app2.js"></script> <!--mobile: app.js / web: app2.js-->
 <title>Pittsburgh Restaurant Search System</title>
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
