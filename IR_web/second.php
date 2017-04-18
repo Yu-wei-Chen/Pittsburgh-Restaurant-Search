@@ -222,6 +222,8 @@ and open the template in the editor.
             include_once("recordToWord.php");  // web: recordToWord.php / mobile recordToWord1.php
         }
 
+
+        // delete the first "," in category 
         $cate_size = 0-(strlen($values)-1);
 
         $values1 = substr($values,$cate_size);
