@@ -45,7 +45,7 @@ function GetValue($url){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   //curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXLGWHYx')); // Yelp token
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXLsoRS1qagxMu61LHGWHYx')); // Yelp token
   $result = curl_exec($ch);
   curl_close($ch);  
   return $result;
@@ -74,6 +74,7 @@ $address[$i] = $de_json1['businesses'][$i]['location']['address1'];
 $city[$i] = $de_json1['businesses'][$i]['location']['city'];
 $state[$i] = $de_json1['businesses'][$i]['location']['state'];
 $url[$i] = $de_json1['businesses'][$i]['url'];
+$id[$i] = $de_json1['businesses'][$i]['id'];
 $categories[$i] = $de_json1['businesses'][$i]['categories'][0]['alias'];
 $latitude1[$i] = $de_json1['businesses'][$i]['coordinates']['latitude'];
 $longitude1[$i] = $de_json1['businesses'][$i]['coordinates']['longitude'];
@@ -138,6 +139,7 @@ for ($i = 0; $i <$num; $i++){
   $name[$i] = $de_json1['businesses'][$arr[$i]]['name'];
   $phone[$i] = $de_json1['businesses'][$arr[$i]]['phone'];
   $mile[$i] = $de_json1['businesses'][$arr[$i]]['distance'];
+  $id[$i] = $de_json1['businesses'][$i]['id'];
 
 }
 

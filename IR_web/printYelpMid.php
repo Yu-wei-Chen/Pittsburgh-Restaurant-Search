@@ -42,7 +42,11 @@ for ($j = 0; $j<$num;$j++){
 	echo "<!--search item 2-->";
 		echo "<div class=\"itemA\">";
 		    echo "<div class=\"item_left\">";
-		    	echo "<img src=".$image_url[$j]." style=\"width: 100%; height: 100%;\"/>";
+          echo "<a href=\" https://www.yelp.com/biz/";
+           echo $id[$j]; 
+          echo "?adjust_creative=ji2Bi6ub1nlhNa6NXHaypQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ji2Bi6ub1nlhNa6NXHaypQ\">";
+		    	 echo "<img src=".$image_url[$j]." style=\"width: 100%; height: 100%;\"/>";
+          echo "</a>";
 		    echo "</div>";
 		    
 		    echo "<div class=\"item_discription\">";
