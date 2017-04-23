@@ -45,7 +45,7 @@ function GetValue($url){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   //curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXLsoRS1qagxMu61LHGWHYx')); // Yelp token
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2CZXLWHYx')); // Yelp token
   $result = curl_exec($ch);
   curl_close($ch);  
   return $result;
@@ -90,9 +90,10 @@ $mile[$i] = $de_json1['businesses'][$i]['distance'];
 // test the search result 
 /*if($a!==null){
 	for ($j = 0; $j<$num;$j++){ //正常顺序
-	echo $address[$j]."<BR>".$city[$j]."<BR>".$state[$j]."<BR>".$url[$j]."<BR>".$categories[$j]."<BR>".$latitude[$j]."<BR>".$longitude[$j]."<BR>".$price[$j]."<BR>".$image_url	[$j]."<BR>".$rating[$j]."<BR>".$name[$j]."<BR>".$phone[$j]."<BR>".$mile[$j]."<BR>"."<BR>"."<BR>";
+	echo $address[$j]."<BR>".$city[$j]."<BR>".$state[$j]."<BR>".$url[$j]."<BR>".$categories[$j]."<BR>".$latitude1[$j]."<BR>".$longitude1[$j]."<BR>".$price[$j]."<BR>".$image_url[$j]."<BR>".$rating[$j]."<BR>".$name[$j]."<BR>".$phone[$j]."<BR>".$mile[$j]."<BR>"."<BR>"."<BR>";
 		}
-	}*/
+	}
+	*/
 
 // change sort type
 if ($sort== "mile"){//按距离排序
@@ -130,6 +131,7 @@ for ($i = 0; $i <$num; $i++){
   $city[$i] = $de_json1['businesses'][$arr[$i]]['location']['city'];
   $state[$i] = $de_json1['businesses'][$arr[$i]]['location']['state'];
   $url[$i] = $de_json1['businesses'][$arr[$i]]['url'];
+  $id[$i] = $de_json1['businesses'][$i]['id'];
   $categories[$i] = $de_json1['businesses'][$arr[$i]]['categories'][0]['alias'];
   $latitude1[$i] = $de_json1['businesses'][$arr[$i]]['coordinates']['latitude'];
   $longitude1[$i] = $de_json1['businesses'][$arr[$i]]['coordinates']['longitude'];
@@ -139,7 +141,6 @@ for ($i = 0; $i <$num; $i++){
   $name[$i] = $de_json1['businesses'][$arr[$i]]['name'];
   $phone[$i] = $de_json1['businesses'][$arr[$i]]['phone'];
   $mile[$i] = $de_json1['businesses'][$arr[$i]]['distance'];
-  $id[$i] = $de_json1['businesses'][$i]['id'];
 
 }
 

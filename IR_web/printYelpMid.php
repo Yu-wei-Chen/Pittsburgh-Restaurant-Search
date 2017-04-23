@@ -45,9 +45,9 @@ for ($j = 0; $j<$num;$j++){
           echo "<a href=\" https://www.yelp.com/biz/";
            echo $id[$j]; 
           echo "?adjust_creative=ji2Bi6ub1nlhNa6NXHaypQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ji2Bi6ub1nlhNa6NXHaypQ\">";
-		    	 echo "<img src=".$image_url[$j]." style=\"width: 100%; height: 100%;\"/>";
+           echo "<img src=".$image_url[$j]." style=\"width: 100%; height: 100%;\"/>";
           echo "</a>";
-		    echo "</div>";
+        echo "</div>";
 		    
 		    echo "<div class=\"item_discription\">";
 		    	echo "<div class=\"item_discription_name\">";
@@ -61,6 +61,7 @@ for ($j = 0; $j<$num;$j++){
 		   		echo "\"/></div>";
 		    	echo "<div class=\"item_discription_category\">";
 		    		echo $categories[$j];
+					echo $url[$j];
 		    	echo"</div>";
 		    echo "</div>";
 		    echo "<div class=\"item_right\">";
@@ -69,7 +70,7 @@ for ($j = 0; $j<$num;$j++){
 		    	echo "</div>";
 		    	echo "<div class=\"item_right_map\">";
             echo "<img src=\"images/map.png\" onclick=\"tomap(".$latitude1[$j].",".$longitude1[$j].")\" />";
-		    		echo number_format($mile[$j]/1609, 2)."<BR>miles";
+		    		echo number_format($mile[$j]/1609, 2)." mi";
 		    	echo "</div>";
 	    echo "</div>";
     echo "</div>";

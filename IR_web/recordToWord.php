@@ -11,12 +11,15 @@ include('GoogleTranslateAPI.php');
 //$term = $_POST['base64'];
 //$language = $_POST['language'];
 
+//echo $language;
+
+
 // get true base64 data
 $term1 = explode("base64,", $term);
 $upload = $term1[1];
 
 // Post to Google Speech API with Google API key
-$url_send ="https://speech.googleapis.com/v1beta1/speech:syncrecognize?key=AIgt4"; 
+$url_send ="https://speech.googleapis.com/v1beta1/speech:syncrecognize?key=AIzt4"; 
 
 
 function setData($language,$upload){
@@ -73,7 +76,7 @@ if ($language == "en"){
   // call function
   $data_API = setData($language,$upload);
   $text1 = sendPostData($url_send, $data_API);
-  $text = GetTranslate($text1);
+  $text = GetTranslate($text1,$language);
 }
 
   // print out

@@ -4,9 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 2017-4-13, 16:40:32
+    Created on : 2017-4-20, 1:21:39
     Author     : lenovo
 */
+
 body
 {
     /*width: 75%;*/
@@ -15,7 +16,7 @@ body
     /*height: 700px;/*change from 650xp*/
     height: 100vh;
     /*height: 100vmax;*/
-    border: 1px solid lightblue;/*change from black*/
+    border: 1px solid white;/*change from black*/
     background-color: white;
     margin: 0 auto;
 }
@@ -24,7 +25,8 @@ body
 {
     width: 100%;
     height: 15%;
-    background-color: lightslategray;
+    background-color: #f0ecf6;
+     border: 1px solid white;
     text-align: center;
     position: fixed;
     z-index: 9999;
@@ -44,7 +46,7 @@ body
 {
     width: 100%;
     height: 50%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     top: 0;
     position: absolute;
     
@@ -57,7 +59,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     position: absolute;
     bottom: 0;
 }
@@ -69,7 +71,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin-left: 33.3%;
     position: absolute;
     bottom: 0;
@@ -82,7 +84,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin-left: 66.6%;
     position: absolute;
     bottom: 0;
@@ -92,7 +94,7 @@ body
 {
     width: 100%;
     height: 50%;
-    border:1px solid black;
+    /*border:1px solid black;*/
     list-style-type: none;
     /*margin-left: 3%;*/
     position: absolute;
@@ -106,7 +108,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     position: absolute;
     bottom: 0;
 }
@@ -117,7 +119,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin-left: 25%;
     position: absolute;
     bottom: 0;
@@ -129,7 +131,7 @@ body
     float: left;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin-left: 50%;
     position: absolute;
     bottom: 0;
@@ -141,7 +143,7 @@ body
     float: right;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin-left: 75%;
     position: absolute;
     bottom: 0;
@@ -155,7 +157,7 @@ body
     height: auto;
     /*height: 75%;*/
     min-height: 75%;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     padding-top: 2%;/*For the fixed position of top_tag*/
     padding-bottom: 6%;/*For the fixed position of top_tag*/
     
@@ -168,7 +170,7 @@ body
 {
     width: 100%;
     height: 18vh;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     /*margin: 0 auto;*/
     /*margin-top: 0.1%;*/
     list-style-type: none;/*eliminate the black point of the picture*/
@@ -176,6 +178,7 @@ body
     position: relative;
     right: 1%;
     margin-top: 1%;
+    background-color: #f0ecf6; 
     
     /*width: 100%;
     height: 33.3%;
@@ -184,6 +187,7 @@ body
     /*margin-left: 3%;
     position: absolute;
     bottom: 0;*/
+   
   
 }
 
@@ -228,7 +232,7 @@ body
 {
     width: 20%;
     height:95%;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     float: left;
@@ -247,7 +251,7 @@ body
 {
     width: 65%;
     height:95%;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     margin-left: 0.5%;
@@ -262,20 +266,23 @@ body
     height: 33.3%;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid red;
+    /*border:1px solid red;*/
     float: left;
     position: relative;
     top:0;
-    font-size:1vmin;
+    font-size:4vmin;
+     font-family: Times New Roman;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .item_discription_Ranking
 {
     width: 50%;
-    height: 30%;
+    height: 25%;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid red;
+    /*border:1px solid red;*/
     float: left;
     top: 0;
     position: relative;
@@ -290,11 +297,12 @@ body
 
 .item_discription_price
 {
-    width: 47%;
-    height: 30%;
+    /*width: 47%;*/
+    width: 30%;
+    height: 25%;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid red;
+    /*border:1px solid red;*/
     float: right;
     top: 0;
     position: relative;
@@ -313,18 +321,21 @@ body
     height: 33.3%;
     /*margin-left: 12%;*/
     /*margin-top: 1%;*/
-    border:1px solid red;
+    /*border:1px solid red;*/
     float: left;
     bottom: 0;
     position: relative;
-    font-size:1vmin;
+    font-size:4.3vmin;
+     font-family: Times New Roman;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .item_right
 {
     width: 13%;
     height:95%;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     margin-left: 86%;
@@ -337,6 +348,8 @@ body
     margin-bottom: 0.5%;
     margin-left: 86%;*/
     position: relative;
+    font-size: 12px;
+    
     
     
 }
@@ -372,8 +385,8 @@ body
 .item_right_phone
 {
     width: 100%;
-    height:50%;
-    border:1px solid blue;
+    height:40%;
+    /*border:1px solid blue;*/
     position: absolute;
     top: 0;
 }
@@ -381,10 +394,12 @@ body
 .item_right_map
 {
     width: 100%;
-    height:50%;
-    border:1px solid blue;
+    height:40%;
+    /*border:1px solid blue;*/
     position: absolute;
-    bottom: 0;
+    /*bottom: 0;*/
+    top: 40%;
+    
 }
 
 .item_right img
@@ -397,7 +412,7 @@ body
 {
     width: 100%;
     height: 10%;
-    background-color: lightslategray;
+    background-color: white;
     z-index: 9999;
     position: fixed;
     bottom: 0;
@@ -407,7 +422,8 @@ body
 
 .bottom_text
 {
-    width: 40%;
+	color:yellow;
+    width: 59%;
     height:90%;
     border: 1px solid black;
     float: left;
@@ -425,7 +441,7 @@ body
 
 .bottom_language
 {
-    width: 25%;
+    width: 18%;
     height:90%;
     border: 1px solid black;
     float: left;
@@ -434,7 +450,7 @@ body
 
 .bottom_recorder
 {
-    width: 30%;
+    width: 18%;
     height:90%;
     border: 1px solid black;
     float: right;
@@ -445,13 +461,13 @@ body
 .bottom_recorder input
 {
     width: 50%;
-    height: 60%;
+    height: 90%;
     margin:0 auto;
 }
 
 .language{  
                 width:100%;  
-                height:50%;  
+                height:9vh;  
                 appearance:none;  
                 position: relative;
                 top: 0;
@@ -463,3 +479,43 @@ body
                 color:black;  
                 text-align: center;
             }  
+            
+.button {
+	display: block; 
+	font-size: 12px; 
+	text-decoration: none!important; 
+	font-family: Helvetica, Arial, sans serif;
+	padding: 8px 12px; 
+	border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	box-shadow: inset 0px 0px 2px #fff;
+	-o-box-shadow: inset 0px 0px 2px #fff;
+	-webkit-box-shadow: inset 0px 0px 2px #fff;
+	-moz-box-shadow: inset 0px 0px 2px #fff;
+}
+.button:active {
+	box-shadow: inset 0px 0px 3px #999;
+	-o-box-shadow: inset 0px 0px 3px #999;
+	-webkit-box-shadow: inset 0px 0px 3px #999;
+	-moz-box-shadow: inset 0px 0px 3px #999;
+}
+
+.black {
+	color: #fff;
+	border: 1px solid #4d4d4d;
+	background-image: -moz-linear-gradient(#656565, #454545);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454545), to(#656565));
+	background-image: -webkit-linear-gradient(#656565, #454545);
+	background-image: -o-linear-gradient(#656565, #454545);
+	text-shadow: 1px 1px 1px #6d6d6d;
+	background-color: #454545;
+}
+.black:hover {
+	border: 1px solid #363636;
+	background-image: -moz-linear-gradient(#454545, #656565);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#656565), to(#454545));
+	background-image: -webkit-linear-gradient(#454545, #656565);
+	background-image: -o-linear-gradient(#454545, #656565);
+	background-color: #656565;
+}
+.black:active {border: 1px solid #000;}

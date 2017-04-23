@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -218,6 +219,34 @@ and open the template in the editor.
         $values = $_POST['tagTerm']; // values hidden split
         $TorF = $_POST['TorF'];
 
+        if (!empty($_POST['TorF'])){
+            //echo "not empty";
+            $_SESSION['term1'] = $term;
+            $_SESSION['language1'] = $language;
+            $_SESSION['a1'] = $a;
+            $_SESSION['latitude1'] = $latitude;
+            $_SESSION['longitude1'] = $longitude;
+            $_SESSION['sort1'] = $sort;
+            $_SESSION['values1'] = $values;
+            $_SESSION['TorF1'] = $TorF;
+            //echo $_SESSION['term1'].$_SESSION['latitude1'].$_SESSION['a1'].$_SESSION['TorF1'];
+        }else{
+            //echo "empty";
+            $term = $_SESSION['term1'];
+            $language = $_SESSION['language1'];
+            $a = $_SESSION['a1'];
+            $latitude = $_SESSION['latitude1'];
+            $longitude = $_SESSION['longitude1']; 
+            $sort = $_SESSION['sort1'];
+            $values = $_SESSION['values1'];
+            $TorF = $_SESSION['TorF1'];
+
+            //echo $a.$TorF;
+
+        }
+
+        
+
         if ($TorF == "T") {
             include_once("recordToWord.php");  // web: recordToWord.php / mobile recordToWord1.php
         }
@@ -241,15 +270,15 @@ and open the template in the editor.
             
             <!--price, distance, rating sorting-->
             <div class="top_sorting">
-                <div class="top_sorting_price">
-                    <input type="button" value="price" id="price" name="price" onclick="sort_price()" style="width: 100%; height: 90%;" >
-                </div>
-                <div class="top_sorting_distance">
-                    <input type="button" value="distance" name="distance" onclick="sort_distance()" style="width: 100%; height: 90%;" >
-                </div>
-                <div class="top_sorting_rating">
-                    <input type="button" value="rating" name="rating" onclick="sort_rating()" style="width: 100%; height: 90%;" >
-                </div>
+                <div class="top_sorting_price"><div class="button black">
+                    <input type="button" value="price" id="price" name="price" onclick="sort_price()" style="background:#454545;color:white;width: 100%; height: 90%;" >
+                </div></div>
+                <div class="top_sorting_distance"><div class="button black">
+                    <input type="button" value="distance" name="distance" onclick="sort_distance()" style="background:#454545;color:white;width: 100%; height: 90%;" >
+                </div></div>
+                <div class="top_sorting_rating"><div class="button black">
+                    <input type="button" value="rating" name="rating" onclick="sort_rating()" style="background:#454545;color:white;width: 100%; height: 90%;" >
+                </div></div>
             
             </div>
             
@@ -257,18 +286,19 @@ and open the template in the editor.
             <div class="tagul">
                 
                 
-                <div class="tagul_list1">
-                    <input type="button" id="tag1" value="<?php echo $tag_final4[0]; ?>" name="t1" style="width: 100%; height: 100%;" onclick="tag1()">
-                </div>
-                <div class="tagul_list2">
-                    <input type="button" id="tag2" value="<?php echo $tag_final4[1]; ?>" name="t2" style="width: 100%; height: 100%;" onclick="tag2()">
-                </div>
-                <div class="tagul_list3">
-                    <input type="button" id="tag3" value="<?php echo $tag_final4[2]; ?>" name="t3" style="width: 100%; height: 100%;" onclick="tag3()">
-                </div>
-                <div class="tagul_list4">
-                    <input type="button" id="tag4" value="<?php echo $tag_final4[3]; ?>" name="t4" style="width: 100%; height: 100%;" onclick="tag4()">
-                </div>
+                <div class="tagul_list1"><div class="button black">
+			
+                    <input type="button" id="tag1" value="<?php echo $tag_final4[0]; ?>" name="t1" style="background:#454545;color:white;width: 100%; height: 100%;" onclick="tag1()">
+				</div></div>
+                <div class="tagul_list2"><div class="button black">
+                    <input type="button" id="tag2" value="<?php echo $tag_final4[1]; ?>" name="t2" style="background:#454545;color:white;width: 100%; height: 100%;" onclick="tag2()">
+                </div></div>
+                <div class="tagul_list3"><div class="button black">
+                    <input type="button" id="tag3" value="<?php echo $tag_final4[2]; ?>" name="t3" style="background:#454545;color:white;width: 100%; height: 100%;" onclick="tag3()">
+                </div></div>
+                <div class="tagul_list4"><div class="button black">
+                    <input type="button" id="tag4" value="<?php echo $tag_final4[3]; ?>" name="t4" style="background:#454545;color:white;width: 100%; height: 100%;" onclick="tag4()">
+                </div></div>
             </div>
         </div>
         
@@ -319,10 +349,10 @@ and open the template in the editor.
         <div class="bottom">
             <!--Wayne edit -->
             <form id="sampleForm1" name="sampleForm1" action="second.php" method="post">
-                <div class="bottom_text">
+                <div class="bottom_text"><div class="button black">
                     <input type="text" style="width: 98%; height: 45%;" name="querytext" id="querytext" value="<?php echo $a; ?>">
-                    <input type="button" value="search" id="searchbutton" name="r1" style="width: 100%; height: 50%;" onclick="submitsearch()">
-                </div>
+                    <input type="button" value="search" id="searchbutton" name="r1" style="background:#454545;color:white;width: 100%; height: 50%;" onclick="submitsearch()">
+                </div></div>
                 <input type="hidden" name="latitude" id="latitude" value="<?php echo $latitude ?>" >
                 <input type="hidden" name="longitude" id="longitude" value="<?php echo $longitude ?>" >
                 <input type="hidden" name="tagTerm" id="tagTerm" value="<?php echo $values ?>" >
@@ -331,16 +361,16 @@ and open the template in the editor.
             </form> 
             <!--Wayne edit -->
             <form id="sampleForm" name="sampleForm" action="second.php" method="post">                            
-                <div class="bottom_language">
+                <div class="bottom_language"><div class="button black">
                     <select name="language" id="language" class="language">  
                         <!--<option value="Language">Language</option>-->  
                         <option value="en">English</option> 
                         <option value="zh">中文</option>   
                     </select>
-                </div>
-                <div class="bottom_recorder">
-                    <input type="button" value="recorder" id="record" name="r1" style="width: 100%; height: 100%;" >
-                </div>
+                </div></div>
+                <div class="bottom_recorder"><div class="button black">
+                    <input type="button" value="recorder" id="record" name="r1" style="background:#454545;color:white;width: 100%; height: 100%;" >
+                </div></div>
                 <!--Wayne add -->
                 <input type="hidden" name="latitude" id="latitude" value="<?php echo $latitude ?>" >
                 <input type="hidden" name="longitude" id="longitude" value="<?php echo $longitude ?>" >

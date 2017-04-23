@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,8 +14,13 @@
         $longitude = $_POST['longitude_tar'];
 
     ?>
+    <input type="button" value="back" id="back" name="back" onclick="backtolist()">
     <div id="map"></div>
     <script type="text/javascript">
+
+    function backtolist(){
+      location.href = 'second.php';
+    }
 
       var map;
       function initMap() {
@@ -36,7 +42,7 @@
 
     </script>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIztbJw&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIbJw&callback=initMap">
     </script>
   </body>
 </html>
